@@ -1,0 +1,133 @@
+const foodData = [
+  
+  {
+    name: "spaghetti and turkey ",
+    ingredients: "spaghetti, turkey and sausage ",
+    price: 2700,
+    photoName: "foods/spaghetti-turkey.jpg",
+    soldOut: false,
+  },
+    {
+      name: "special rice",
+      ingredients: "",
+      price: 1300,
+      photoName: "foods/dirtyrice.jpg",
+      soldOut: false,
+    },
+    {
+      name: "party jollof and chicken",
+      ingredients: "",
+      price: 2500,
+      photoName: "foods/jollofrice.jpg",
+      soldOut: false,
+    },
+    {
+      name: "party jollof and turkey",
+      ingredients: "",
+      price: 2700,
+      photoName: "foods/jollof-rice-turkey.jpg",
+      soldOut: false,
+    },
+    {
+      name: "party jollof and kebab",
+      ingredients: "",
+      price: 2000,
+      photoName: "foods/kebab-rice.jpg",
+      soldOut: false,
+    },
+    {
+      name: "turkey",
+      ingredients: "",
+      price: 1700,
+      photoName: "foods/turkeywings.jpg",
+      soldOut: false,
+    },
+    {
+      name: "grilled chicken",
+      ingredients: "",
+      price: 1500,
+      photoName: "foods/drumstick.jpg",
+      soldOut: false,
+    },
+    {
+      name: "meat pie",
+      ingredients: "",
+      price: 18000,
+      photoName: "foods/meatpie.jpg",
+      soldOut: true,
+    },
+    {
+      name: "koko and akara ",
+      ingredients: "pap, moio moi and milk ",
+      price: 18000,
+      photoName: "foods/koko.jpg",
+      soldOut: true,
+    },
+    {
+      name: "spaghetti and chicken ",
+      ingredients: "spaghetti, turkey and sausage ",
+      price: 2500,
+      photoName: "foods/spaghetti.jpg",
+      soldOut: false,
+    },
+    {
+      name: "zobo",
+      ingredients: "",
+      price: 200,
+      photoName: "foods/zobo.jpg",
+      soldOut: true,
+    },
+    
+     {
+      name: "jambalaya rice and chicken",
+      ingredients: "",
+      price: 12000,
+      photoName: "foods/jombolo.jpg",
+      soldOut: true,
+    },
+     {
+      name: "grilled fish",
+      ingredients: "fish and chips ",
+      price: 7000,
+      photoName: "foods/grilledcatfish.jpg",
+      soldOut: true,
+    },
+     {
+      name: "titus fish",
+      ingredients: " ",
+      price: 1000,
+      photoName: "foods/titus-fish.jpg",
+      soldOut: false,
+    },
+     {
+      name: "kebab and dodo stick",
+      ingredients: "beef and dodo",
+      price: 1000,
+      photoName: "foods/kebab.jpg",
+      soldOut: false,
+    },
+     {
+      name: "spaghetti and kebab",
+      ingredients: "spaghetti beef and dodo",
+      price: 2000,
+      photoName: "foods/spaghetti.jpg",
+      soldOut: false,
+    },
+     {
+      name: "plantain",
+      ingredients: "",
+      price: 1000,
+      photoName: "foods/plantain.jpg",
+      soldOut: false,
+    },
+    {
+      name: "basmatti rice and chicken",
+      ingredients: "",
+      price: 2700,
+      photoName: "foods/basmatti.jpg",
+      soldOut: true,
+    },
+  ];
+  
+  export default foodData;
+  

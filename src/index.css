@@ -1,0 +1,404 @@
+/* General styles */
+body {
+  font-family: 'Roboto Mono', monospace;
+  background-color: #dfd1c1;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 70px; /* Adjust this value as needed to prevent overlap */
+}
+
+/* Header */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 1002; /* Make sure it overlaps everything */
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 28px;
+  color: #837128; /* Yellow color */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Menu */
+.menu {
+  text-align: center;
+  margin-bottom: 20px; /* Add more space below the menu */
+  margin-top: 20px; /* Adjust the space above the menu */
+}
+
+.menu h2 {
+  display: inline-block;
+  font-size: 32px; /* Reduced font size */
+  color: #8f7e3c; /* Yellow color */
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  text-decoration-thickness: 2px;
+  text-decoration-skip-ink: none;
+  text-decoration-offset: 5px;
+  padding-top: 5px;
+}
+
+.menu p {
+  font-size: 16px; /* Reduced font size */
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Pizza list */
+.foods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Further reduced minmax value */
+  gap: 20px; /* Added gap for space between food items */
+  list-style: none;
+  padding: 10px 0; /* Reduced padding */
+  margin: 0;
+  padding: 0 8px; /* Reduced padding for the sides */
+}
+
+@media (min-width: 1024px) {
+  .foods {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0; /* Remove padding for larger screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .foods {
+    grid-template-columns: repeat(2, 1fr); /* Two foods per row on mobile */
+    gap: 10px; /* Ensure consistent spacing on mobile */
+    padding: 0 10px; /* Adjusted padding for mobile */
+  }
+}
+
+/* Food item */
+.food {
+  border: 2px solid rgb(145, 87, 21); /* Reduced border size */
+  border-radius: 8px; /* Adjusted border radius */
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+  margin-bottom: 5px;
+}
+
+.food:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.food img {
+  width: 100%;
+  height: 150px; /* Further reduced height */
+  object-fit: cover;
+}
+
+.food div {
+  padding: 4px 0; /* Reduced padding */
+}
+
+.food h3 {
+  margin: 4px 0;
+  font-size: 14px; /* Further reduced font size */
+  color: #916724; /* Yellow color */
+}
+
+.food p {
+  margin: 0 0 4px; /* Reduced margin */
+  font-size: 12px; /* Further reduced font size */
+  color: #666;
+}
+
+.food span {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 0.9rem; /* Further reduced font size */
+  color: #81501f; /* Yellow color */
+}
+
+/* Sold out style */
+.food.sold-out {
+  opacity: 0.5;
+}
+
+.food.sold-out h3,
+.food.sold-out span {
+  color: #d9534f; /* Red color for sold out */
+}
+
+/* Ingredients style */
+.ingredients {
+  font-weight: bold;
+  color: #653c0f; /* Brown color */
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  background-color: #d9bc8c;
+  border-radius: 5px;
+  padding: 20px; /* Add padding for better spacing */
+}
+
+.footer p {
+  font-size: 16px;
+  color: #666;
+  margin: 10px 0; /* Add margin for better spacing */
+}
+
+.footer .address {
+  margin-bottom: 1rem;
+}
+
+.footer .icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px; /* Add space between icons */
+  padding: 10px; /* Add padding around icons */
+  margin-top: 10px; /* Add margin to separate from text */
+}
+
+/* Order section */
+.order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #574e30;
+  margin-top: 10px;
+}
+
+.order p {
+  font-size: 16px; /* Reduced font size */
+  color: #653c0f;
+}
+
+/* Buttons */
+.btn {
+  margin-top: 10px;
+  padding: 8px 16px; /* Reduced padding */
+  font-size: 14px; /* Reduced font size */
+  background-color: #443a13; /* Brown background */
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e6c44e; /* Slightly darker yellow */
+}
+
+/* Icons */
+.icon {
+  font-size: 20px; /* Reduced font size */
+  color: rgb(227, 144, 34);
+  cursor: pointer;
+  display: inline-block; /* Make icons inline-block */
+  margin: 0 8px; /* Add space around each icon */
+}
+
+.icon.disabled {
+  color: grey;
+  cursor: not-allowed;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon-link {
+  text-decoration: none; /* Remove underline from links */
+}
+
+.icon-link:hover .icon {
+  color: rgb(68, 46, 20); /* Change to your desired hover color */
+}
+
+/* Icon Divider */
+.icon-divider {
+  width: 2px;
+  height: 20px; /* Reduced height */
+  background-color: #574e30; /* Brown color for the divider */
+  margin: 0 8px;
+}
+
+/* WhatsApp button */
+.btn-whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  margin-top: 10px;
+  background-color: rgb(82, 56, 22); /* Brown background */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+}
+
+.btn-whatsapp:hover {
+  background-color: #d2b48c; /* Light brown color on hover */
+}
+
+.btn-whatsapp:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #999;
+}
+
+.btn-whatsapp-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Cart */
+.cart {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 250px; /* Reduced width */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Reduced border radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 16px; /* Reduced padding */
+  z-index: 1001;
+  display: none; /* Initially hidden */
+}
+
+.cart.show {
+  display: block; /* Show the cart when it has the 'show' class */
+}
+
+.cart h2 {
+  font-size: 22px; /* Reduced font size */
+  margin-bottom: 16px; /* Reduced margin */
+  text-align: center;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0; /* Reduced padding */
+}
+
+.cart li:last-child {
+  border-bottom: none;
+}
+
+.cart .item-name {
+  font-size: 16px; /* Reduced font size */
+  color: #666;
+}
+
+.cart .item-remove {
+  background-color: #d9534f; /* Red color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 4px 8px; /* Reduced padding */
+}
+
+.cart .item-remove:hover {
+  background-color: #c9302c;
+}
+
+.cart .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px; /* Reduced font size */
+  margin-top: 16px; /* Reduced margin */
+}
+
+.cart .total .total-label {
+  font-weight: bold;
+}
+
+.cart .total .total-price {
+  font-weight: bold;
+  color: #574e30;
+}
+
+.cart .checkout-btn {
+  display: block;
+  width: 100%;
+  padding: 8px 0; /* Reduced padding */
+  background-color: #443a13; /* Brown background */
+  color: #f3e2ac;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px; /* Reduced font size */
+  margin-top: 16px; /* Reduced margin */
+  transition: background-color 0.3s;
+}
+
+.cart .checkout-btn:hover {
+  background-color: #e6c44e; /* Slightly darker yellow */
+}
+
+/* Adjustments for header image */
+.header-img {
+  height: 4rem; /* Adjust the height to match the header size */
+  width: auto; /* Maintain aspect ratio */
+}
+
+@media (min-width: 768px) {
+  .header-img {
+    height: 6rem; /* Adjust for larger screens if needed */
+  }
+}
+
+/* Cart button */
+.cart-button {
+  background-color: #443a13;
+  color: #f3e2ac;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px; /* Reduced padding */
+  cursor: pointer;
+  font-size: 14px; /* Reduced font size */
+  transition: background-color 0.3s;
+}
+
+.cart-button:hover {
+  background-color: #574e30;
+}
